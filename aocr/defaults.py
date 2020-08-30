@@ -12,7 +12,7 @@ class Config(object):
     VISUALIZE = False
 
     # I/O
-    NEW_DATASET_PATH = './dataset.tfrecords'
+    NEW_DATASET_PATH = '/content/gdrive/My Drive/tfrecord'
     DATA_PATH = './data.tfrecords'
     MODEL_DIR = './checkpoints'
     LOG_PATH = 'aocr.log'
@@ -25,7 +25,7 @@ class Config(object):
     FULL_ASCII = False
 
     # Optimization
-    NUM_EPOCH = 1000
+    NUM_EPOCH = 100
     BATCH_SIZE = 65
     INITIAL_LEARNING_RATE = 1.0
 
@@ -42,8 +42,8 @@ class Config(object):
     CHANNELS = 1  # number of color channels from source image (1 = grayscale, 3 = rgb)
 
     MAX_WIDTH = 160
-    MAX_HEIGHT = 60
-    MAX_PREDICTION = 8
+    MAX_HEIGHT = 32
+    MAX_PREDICTION = 15
 
     USE_DISTANCE = True
 
