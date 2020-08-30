@@ -73,7 +73,7 @@ try:
     linear = rnn_cell_impl._linear  # pylint: disable=protected-access
 except AttributeError:
     # pylint: disable=protected-access,no-name-in-module
-    from tensorflow.contrib.rnn.python.ops import core_rnn_cell
+    from tensorflow.compat.v1.contrib.rnn.python.ops import core_rnn_cell
     linear = core_rnn_cell._linear
 
 
