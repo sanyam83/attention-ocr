@@ -9,7 +9,7 @@ import sys
 import argparse
 import logging
 
-import tensorflow as tf
+import tensorflow as tf.compat.v1
 
 from .model.model import Model
 from .defaults import Config
