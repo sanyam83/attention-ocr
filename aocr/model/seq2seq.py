@@ -65,9 +65,9 @@ from six.moves import zip     # pylint: disable=redefined-builtin
 import tensorflow as tf
 
 try:
-    from tensorflow.contrib.rnn.python.ops import rnn_cell_impl
+    from tensorflow.compat.v1.contrib.rnn.python.ops import rnn_cell_impl
 except ImportError:
-    from tensorflow.python.ops import rnn_cell_impl
+    from tensorflow.compat.v1.python.ops import rnn_cell_impl
 
 try:
     linear = rnn_cell_impl._linear  # pylint: disable=protected-access
