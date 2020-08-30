@@ -62,18 +62,18 @@ from __future__ import print_function
 from six.moves import xrange  # pylint: disable=redefined-builtin
 from six.moves import zip     # pylint: disable=redefined-builtin
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 try:
-    from tensorflow.compat.v1.contrib.rnn.python.ops import rnn_cell_impl
+    from tf.contrib.rnn.python.ops import rnn_cell_impl
 except ImportError:
-    from tensorflow.compat.v1.python.ops import rnn_cell_impl
+    from tf.python.ops import rnn_cell_impl
 
 try:
     linear = rnn_cell_impl._linear  # pylint: disable=protected-access
 except AttributeError:
     # pylint: disable=protected-access,no-name-in-module
-    from tensorflow.compat.v1.contrib.rnn.python.ops import core_rnn_cell
+    from tf.contrib.rnn.python.ops import core_rnn_cell
     linear = core_rnn_cell._linear
 
 
